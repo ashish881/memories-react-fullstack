@@ -4,7 +4,7 @@ import { DELETE_POST, GET_POST, LIKE_POST, POST_DATA, UPDATE_POST } from '../con
 
 export const getPost = () => async (dispatch) =>{
     try {
-        const {data} = await Axios.get('/posts/');
+        const {data} = await Axios.get('https://memoryy-project.herokuapp.com/posts/');
          dispatch({
              type: GET_POST,
              payload: data,
@@ -16,7 +16,7 @@ export const getPost = () => async (dispatch) =>{
 
 export const createPost = (post) => async (dispatch) =>{
     try {
-        const {data} = await Axios.post('/posts/',post);
+        const {data} = await Axios.post('https://memoryy-project.herokuapp.com/posts/',post);
          dispatch({
              type: POST_DATA,
              payload: data,
@@ -28,7 +28,7 @@ export const createPost = (post) => async (dispatch) =>{
 
 export const updatePost = (id,updatePost) => async (dispatch) =>{
     try {
-        const {data} = await Axios.patch(`/posts/${id}`,updatePost);
+        const {data} = await Axios.patch(`https://memoryy-project.herokuapp.com/posts/${id}`,updatePost);
          dispatch({
              type: UPDATE_POST,
              payload: data,
@@ -40,7 +40,7 @@ export const updatePost = (id,updatePost) => async (dispatch) =>{
 
 export const deletePost = (id) => async (dispatch) =>{
     try {
-        await Axios.delete(`/posts/${id}`);
+        await Axios.delete(`https://memoryy-project.herokuapp.com/posts/${id}`);
         dispatch({
             type: DELETE_POST,
             payload:id,
@@ -52,7 +52,7 @@ export const deletePost = (id) => async (dispatch) =>{
 
 export const likePost = (id) => async (dispatch) =>{
     try {
-      const {data} = await Axios.patch(`/posts/${id}/likePost`);
+      const {data} = await Axios.patch(`https://memoryy-project.herokuapp.com/posts/${id}/likePost`);
         dispatch({
             type: LIKE_POST,
             payload: data,
