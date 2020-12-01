@@ -59,6 +59,7 @@ textarea{
     display: flex;
     flex-wrap: wrap;
     
+    
 }
 h4{
     text-align: center;
@@ -101,7 +102,7 @@ button{
 .card-container {
     background-color: #fff;
     width:25rem;
-    min-height: 32rem;
+    height: fit-content;
     margin-left: 2rem;
     border-radius: 1rem;
     position: relative;
@@ -124,11 +125,14 @@ button{
     font-size: 2rem;
     letter-spacing: .2rem;
     color:rgb(248, 248, 248);
+    word-break: break-all;
 }
 
 .card-container span {
-    margin: 1rem;
+    /* margin: 1rem; */
     font-size:1.4rem;
+   
+   
 }
 
 .card-container h3{
@@ -136,6 +140,7 @@ button{
     letter-spacing: .3rem;
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
+    word-break: break-all;
 }
 
 .card-container h6{
@@ -144,7 +149,7 @@ button{
     color:rgb(112, 112, 112);
     /* word-spacing: .2rem; */
     word-wrap: break-word;
-    min-height:10rem ;
+    /* min-height:10rem ; */
 }
 
 .fa-ellipsis-h{
@@ -159,8 +164,8 @@ button{
 
 
 .fa-thumbs-up{
-    /* position: absolute;
-    bottom: 0;  */
+    position: relative;
+    bottom: 0; 
     
     margin:2rem;
     font-size: 1.2rem;
@@ -175,13 +180,10 @@ button{
 
 
 .fa-trash{
-     /* position: absolute;
-    bottom: 0;  */
-    
+      position: relative;
+    right: -7.0rem;  
     margin:2rem;
      font-size: 1.2rem;
-    position: absolute;
-    right:0;
     color:rgb(69, 33, 197);
     cursor: pointer;
 }
@@ -193,13 +195,15 @@ button{
 .tag-class{
     font-size: 1.3rem;
     display: inline;
-    margin-right:.3rem ;
+    margin-right:.5rem ;
     margin-left: .5rem;
+     /* word-wrap: break-word; */
+     word-break: break-all;
 }
 
-.icon-container{
+/* .icon-container{
   margin-top:1rem;
-}
+} */
 
 @media(max-width:710px){
     
