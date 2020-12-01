@@ -13,10 +13,10 @@ export default function Post({ post, setcurrentId }) {
                 <span>{post.tags.map((tag) => <p className="tag-class">#{tag}</p>)}</span>
                 <h3>{post.title}</h3>
                 <h6>{post.message}</h6>
-                {/* <div className="icon-container"> */}
+                <div className="icon-container">
                     <i className="fas fa-thumbs-up" onClick={() => dispatch(likePost(post._id))}>{" "}LIKE{" "}{post.likeCount}</i>
                     <i className="fas fa-trash" onClick={() => dispatch(deletePost(post._id))}>DELETE</i>
-                
+                </div>
             </div>
         </>
     )
